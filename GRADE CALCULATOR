@@ -1,0 +1,49 @@
+/*
+PERECENTAGE AND GRADE CALCULATOR 
+TAKE INPUT OF MARKS OF 5 SUBJECTS OUT OFF 100
+PRINT OUTPUT ACCORDINGLY
+*/
+#include <stdio.h>
+
+int main()
+{
+    //DECLARING VARIABLES
+int s1,s2,s3,s4,s5;
+float p;
+printf("enter the marks of fivr subjects out of 100:");
+scanf("%d%d%d%d%d",&s1,&s2,&s3,&s4,&s5);
+//CHECK CONDITIONS AND CALCULATE THE OUTPUT
+if (s1<40||s2<40||s3<40||s4<40||s5<40)
+{printf("your marks of one of the subject is less than 40 so you are failed");
+goto xyz;}
+if(s1>100||s2>100||s3>100||s4>100||s5>100)
+{printf("\nyou entered marks of one of the subject greater than 100 which is invalid");
+goto xyz;}
+p=(s1+s2+s3+s4+s5)/5 ;
+printf("\npercentage of the student is:%f",p); 
+if(p>=75)
+printf("\nthe grade is distinction.");
+else
+if(p<75&&p>=60)
+printf("\nthe grade ia first.");
+else
+if(p<60&&p>=50)
+printf("\nthe grade is second.");
+else
+if(p<50&&p>=40)
+printf("\nthe grade is third.");
+else
+printf("\nthe student is fail.");
+
+
+   xyz: return 0;
+}
+
+
+
+
+
+
+
+
+
